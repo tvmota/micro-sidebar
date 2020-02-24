@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-green-300 shadow-lg h-100">
-    <ul class="flex flex-col font-sans mt-8">
+  <div class="bg-green-300 shadow-lg h-full"> 
+    <ul class="flex flex-col font-sans">
       <li class="p-1 pl-2 " v-for="(route, idx) in rotas" :key="idx">
         <router-link :to="route.path" active-class="underline text-gray-600">
           {{route.name}}
@@ -26,27 +26,15 @@
             name: 'App1',
           },
           {
-            path: '/app2',
-            name: 'App2',
-            children: [
-              {
-                path: '/about',
-                name: 'About',
-              },
-            ]
+            path: '/svelte',
+            name: 'Svelte',
           },
           {
-            path: '/app3',
-            name: 'App3',
+            path: '/angularjs',
+            name: 'AngularJs',
           },
         ]
       };
     },
   };
 </script>
-
-<style scoped>
-  .grid__container__sidebar {
-    grid-area: 2 / 1 / 6 / 2;
-  }
-</style>
