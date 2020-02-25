@@ -5,11 +5,6 @@
         <router-link :to="route.path" active-class="underline text-gray-600">
           {{route.name}}
         </router-link>
-        <ul v-if="route.children">
-          <li v-for="(subroute, subidx) in route.children" :key="subidx">
-            <router-link :to="`${route.path}${subroute.path}`">{{subroute.name}}</router-link>
-          </li>
-        </ul>
       </li>
     </ul>
   </div>
